@@ -31,20 +31,8 @@ const HomePage = () => {
     }
   }
 
-  const getGoodBooks = async () => {
-    try {
-      const { data } = await axios.get('http://localhost:4000/book/getallbooks', {
-        params: {
-          page: currentPage
-        }
-      });
-      setBooks(data.books);
-      setTotalPages(data.totalPages);
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
-  console.log(sample)
+  
+  // console.log(sample)
 
   useEffect(() => {
     getAllBooks()
