@@ -14,6 +14,7 @@ const bookRoutes = require("./routes/bookRoutes")
 
 
 app.use("/book",bookRoutes)
+app.use("/pen",bookRoutes)
 
 app.get("/", (req, res) => {
     res.send("Sever is Running");
