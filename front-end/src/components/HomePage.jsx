@@ -104,7 +104,7 @@ function formatDate(dateString) {
   return (
     <div>
     <h1 className="text-3xl font-bold underline text-center">
-      Welcome to Book World!
+      Welcome to Sreehari World!
     </h1>
     <div className='text-center'>
       <Link to='/addnewbook'><button className='bg-green-500 mt-5 px-2 py-1 text-white rounded-lg'>Add New Book</button></Link>
