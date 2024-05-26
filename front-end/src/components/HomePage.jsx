@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const HomePage = () => {
+  const [sample, setSample] = useState("")
   const [books, setBooks] = useState([])
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -24,10 +25,13 @@ const HomePage = () => {
       });
       setBooks(data.books);
       setTotalPages(data.totalPages);
+      setSample(data)
     } catch (error) {
       console.log(error.message);
     }
   }
+
+  console.log(sample)
 
   useEffect(() => {
     getAllBooks()
