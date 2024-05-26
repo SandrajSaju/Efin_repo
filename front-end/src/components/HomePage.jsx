@@ -31,6 +31,21 @@ const HomePage = () => {
     }
   }
 
+  const getNewBooks = async () => {
+    try {
+      const { data } = await axios.get('http://localhost:4000/book/getallbooks', {
+        params: {
+          page: currentPage
+        }
+      });
+      setBooks(data.books);
+      setTotalPages(data.totalPages);
+      setSample(data)
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   
   // console.log(sample)
 
